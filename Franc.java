@@ -1,16 +1,10 @@
-public void testFrancMultiplication() {
-   Franc five = new Franc(5);
-   assertEquals(new Franc(10), five.times(2));
-   assertEquals(new Franc(15), five.times(3));
-}
-
-class Franc {   
+class Franc extends Money {   
    Franc(int amount) {      
       this.amount= amount;
     }					
-    
-    Franc times(int multiplier)  {      
-       return new Franc(amount * multiplier);					
-    }   
+
+    Money times(int multiplier)  {
+      return new Dollar(amount * multiplier);
+   }   
 				
 }
